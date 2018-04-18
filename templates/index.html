@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <title>Topic Wise Sentiment Analysis of Tweets</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <!-- Add additional CSS in static file -->
+
+  <link rel="stylesheet" href='styles.css'">
+</head>
+
+<body background="/static/background.png">
+  <div class="jumbotron">
+    <h1 class="display-1"><center><u>Interactive SENTIMENT Analysis of Twitter Tweets</u></center></h1>
+    <center><p class="lead">Welcome to <em>iSentiment</em>, a basic webApp developed for Interactive Sentiment Analysis of Twitter Tweets.</p></center>
+</div>
+
+    <div class="container-fluid">
+      <br>
+      <br>
+      <div class="col-md-4 col-md-offset-4">
+      <form id="sform" method="post">
+        <div class="form-group">
+          <label for="tweetTopic">Tweet Topic</label>
+          <input type="text" name="tweetTopic" class="form-control" id="tweetTopic" aria-describedby="topicHelp" placeholder="Enter Topic">
+          <small id="topicHelp" class="text-dark">Input a topic on which you want to perform Sentiment Analysis</small>
+        </div>
+        <div class="form-group">
+          <label for="tweetNumber">Tweet Number</label>
+          <input type="text" name="tweetNumber" class="form-control" id="tweetNumber" aria-describedby="numberHelp" placeholder="enter Number" value="">
+          <small id="numberHelp" class="text-dark">Input number of tweets with which you want to perform Sentiment Analysis</small>
+        </div>
+        <center><button type="submit" class="btn btn-primary">Get Sentimensts Plot!</button></center>
+      </form>
+      <br>
+      <br>
+      <div class="alert alert-info" role="alert">
+  <strong>Heads up!</strong> Due to Tweepy api restrictions, a maximum of 1000 tweets can be fetched at one time from the past 7 days. For Sentiment Analysis, TextBlob package was used.
+  </div>
+    </div>
+
+  </div>
+</body>
+</html>
+
